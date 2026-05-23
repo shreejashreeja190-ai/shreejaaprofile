@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shreeja Portfolio</title>
+
+<!-- GOOGLE FONT -->
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    color:#3d2b1f;
+    line-height:1.6;
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(rgba(255,255,255,0.18),
+    rgba(255,255,255,0.18)),
+    url('background.webp');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+/* NAVBAR */
+
+nav{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+
+    padding:18px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+nav a{
+
+    color:#4b3425;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+
+    color:#8b5e3c;
+    transform:translateY(-3px);
+}
+
+/* HEADER */
+
+header{
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:40px 20px;
+}
+
+header img{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:4px solid rgba(255,255,255,0.4);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.15);
+
+    margin-bottom:25px;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+header h1{
+
+    font-size:4rem;
+    color:#4b3425;
+    margin-bottom:15px;
+}
+
+header p{
+
+    font-size:1.1rem;
+    color:#5a4334;
+    max-width:700px;
+}
+
+/* GLASSMORPHISM */
+
+section{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.1);
+
+    transition:0.4s ease;
+}
+
+section:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.01);
+
+    box-shadow:
+    0 10px 40px rgba(255,255,255,0.25),
+    0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2{
+
+    color:#6a4933;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+/* PROJECT CARDS */
+
+.projects div{
+
+    margin-top:25px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    transition:0.4s ease;
+}
+
+.projects div:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.02);
+
+    background:rgba(255,255,255,0.22);
+}
+
+.projects h3{
+
+    margin-bottom:12px;
+    color:#4b3425;
+}
+
+.projects a{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    text-decoration:none;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,0.2);
+
+    color:#4b3425;
+
+    transition:0.3s;
+}
+
+.projects a:hover{
+
+    background:#4b3425;
+    color:white;
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(10px);
+
+    margin-top:40px;
+
+    color:#4b3425;
+}
+
+/* SCROLL ANIMATION */
+
+.hidden{
+
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s ease;
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:2.8rem;
+    }
+
+    header img{
+        width:170px;
+        height:170px;
+    }
+
+    section{
+        padding:25px;
+    }
+
+    nav{
+        gap:15px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<img src="profile picture.jpeg" alt="Profile" />
+
+<h1>SHREEJA T</h1>
+
+<p>
+Computer Science Engineer @ESEC (2023-2027)
+Passionate UI/UX Designer & Web Developer
+</p>
+
+</header>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#internship">Internship</a>
+<a href="#skills">Skills</a>
+<a href="#certifications">Certifications</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+B.E in Computer Science and Engineering at
+Erode Sengunthar Engineering College (2023-2027)
+</p>
+
+</section>
+
+<!-- INTERNSHIP -->
+
+<section id="internship">
+
+<h2>Internship</h2>
+
+<p>
+Neha Solutions internship focused on cybersecurity,
+gaining practical experience in cybercrime activities,
+real-time project training and foundational concepts.
+</p>
+
+<br>
+
+<p>
+Ediglobe internship focused on UI/UX designing,
+wireframing, prototyping and practical experience
+in user interface and user experience concepts.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<ul>
+
+<li>HTML, CSS, Java (Basics)</li>
+<li>UI/UX Designing</li>
+<li>Canva</li>
+<li>Figma</li>
+<li>Git & GitHub</li>
+<li>Deployment (Netlify)</li>
+<li>Communication</li>
+<li>Teamwork</li>
+
+</ul>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<ul>
+
+<li>Gemini in Google Meet</li>
+<li>ChatGPT for YouTube Video Creation</li>
+<li>Prompt Engineering Applications</li>
+<li>Built Website with AI</li>
+
+</ul>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="projects">
+
+<h2>Projects</h2>
+
+<div>
+
+<h3>Portfolio Website</h3>
+
+<p>
+A responsive portfolio website created using
+HTML, CSS and JavaScript with modern UI design.
+</p>
+
+<p>
+Tools Used: HTML, CSS, JavaScript
+</p>
+
+</div>
+
+<div>
+
+<h3>FLAMES Game</h3>
+
+<p>
+Interactive relationship prediction website using
+the classic FLAMES algorithm.
+</p>
+
+<p>
+Tools Used: HTML, CSS, JavaScript
+</p>
+
+<a href="https://shreejaflamin.netlify.app" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>Age Calculator Website</h3>
+
+<p>
+Responsive website to calculate exact age using
+JavaScript date calculations.
+</p>
+
+<p>
+Tools Used: HTML, CSS, JavaScript
+</p>
+
+<a href="https://shreejacalci.netlify.app" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>Hospital Booking Management App</h3>
+
+<p>
+Modern UI/UX design for booking hospital appointments
+with smooth and user-friendly experience.
+</p>
+
+<p>
+Tool Used: Figma
+</p>
+
+<a href="https://lnkd.in/gniD6aPg" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>Mental Health App</h3>
+
+<p>
+Creative UI/UX design focused on clean layouts
+and positive user experience.
+</p>
+
+<p>
+Tool Used: Figma
+</p>
+
+<a href="https://github.com/shreejashreeja190-ai/mentalhealthapp" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>AI Coaching Institute</h3>
+
+<p>
+Traditional and aesthetic UI design for educational
+and coaching institute platform.
+</p>
+
+<p>
+Tool Used: Figma
+</p>
+
+<a href="https://github.com/shreejashreeja190-ai/AI-coaching" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>Travelora Mobile App Design</h3>
+
+<p>
+Modern travel app interface with clean layouts
+and engaging visual design.
+</p>
+
+<p>
+Tool Used: Figma
+</p>
+
+<a href="https://github.com/shreejashreeja190-ai/traveloratrip" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>To Do List UI Design</h3>
+
+<p>
+Minimal and user-friendly productivity app design.
+</p>
+
+<p>
+Tool Used: Figma
+</p>
+
+<a href="https://github.com/shreejashreeja190-ai/todolist" target="_blank">
+View Project
+</a>
+
+</div>
+
+<div>
+
+<h3>Street Food Finder</h3>
+
+<p>
+Modern UI design for discovering local street food places.
+</p>
+
+<p>
+Tool Used: Figma
+</p>
+
+<a href="https://github.com/shreejashreeja190-ai/streetfood" target="_blank">
+View Project
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<p>Mobile No: +91 8807726362</p>
+<p>Email: shreejashreeja190@gmail.com</p>
+<p>GitHub: Shreeja T</p>
+<p>LinkedIn: SHREEJA T</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2025 SHREEJA T. All Rights Reserved.</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add('show');
+        }
+
+    });
+
+});
+
+const hiddenElements = document.querySelectorAll('section');
+
+hiddenElements.forEach((el)=>{
+
+    el.classList.add('hidden');
+
+    observer.observe(el);
+
+});
+
+/* BACKGROUND MOVEMENT */
+
+document.addEventListener("mousemove",(e)=>{
+
+    let x = e.clientX / window.innerWidth;
+
+    let y = e.clientY / window.innerHeight;
+
+    document.body.style.backgroundPosition =
+    `${50 + x * 5}% ${50 + y * 5}%`;
+
+});
+
+</script>
+
+</body>
+</html>
